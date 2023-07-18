@@ -2,7 +2,7 @@ package CodingNinjaPOTD;
 
 import com.example.datastructure.skeleton.TreeNode;
 
-public class RecoverBST {
+public class RecoverBST_Hard1707 {
     TreeNode prev= null;
     TreeNode first = null;
     TreeNode second = null;
