@@ -5,6 +5,7 @@ package com.example.datastructure.skeleton;
      public TreeNode left;
      public TreeNode right;
      public TreeNode random;
+     public TreeNode next;
      TreeNode() {}
      public TreeNode(int val) { this.val = val; }
      
