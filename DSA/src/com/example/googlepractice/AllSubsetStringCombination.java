@@ -6,7 +6,7 @@ public class AllSubsetStringCombination {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<String> list = combination("abc");
+		List<String> list = combination("abba");
 		System.out.println(list);
 
 	}
@@ -21,6 +21,7 @@ public class AllSubsetStringCombination {
 
 		char[] chars = new char[map.size()];
 		int[] count = new int[map.size()];
+		
 		char[] res = new char[str.length()];
 		int index=0;
 		for(Map.Entry<Character,Integer> m1 : map.entrySet())
@@ -39,9 +40,9 @@ public class AllSubsetStringCombination {
 			int[] count, char[] res, int curr, int size, int length,
 			List<String> list) {
 
-		if(curr == size) return;
+		if(curr == length) return;
 
-		for(int i = 0 ; i<length;i++)
+		for(int i = 0 ; i<size;i++)
 		{
 			if(count[i] == 0) continue;
 
