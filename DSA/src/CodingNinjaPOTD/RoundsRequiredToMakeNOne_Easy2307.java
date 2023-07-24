@@ -2,7 +2,7 @@ package CodingNinjaPOTD;
 import java.util.* ;
 import java.io.*; 
 
-public class RoundsRequiredToMakeNOne {
+public class RoundsRequiredToMakeNOne_Easy2307 {
 
     public static int rounds(int a,int b) {
         //Write your code here

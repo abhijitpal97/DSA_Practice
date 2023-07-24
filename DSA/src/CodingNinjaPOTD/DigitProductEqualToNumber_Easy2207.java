@@ -2,7 +2,7 @@ package CodingNinjaPOTD;
 import java.util.* ;
 import java.io.*; 
 
-public class DigitProductEqualToNumber_Moderate2207 {
+public class DigitProductEqualToNumber_Easy2207 {
 
 	public static int digitProduct(int n) {
 		// Write your code here.

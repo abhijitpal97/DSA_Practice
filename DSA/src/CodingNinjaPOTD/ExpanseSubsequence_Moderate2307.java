@@ -2,7 +2,7 @@ package CodingNinjaPOTD;
 import java.util.* ;
 import java.io.*; 
 
-public class ExpanseSubsequence {
+public class ExpanseSubsequence_Moderate2307 {
 
     public static int expanseOfSubsequences(int[] arr) {
         // Write your code here

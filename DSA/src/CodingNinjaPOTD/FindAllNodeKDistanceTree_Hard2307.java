@@ -4,7 +4,7 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
-public class FindAllNodeKDistanceTree {
+public class FindAllNodeKDistanceTree_Hard2307 {
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         Map<TreeNode,TreeNode> map = new HashMap<>();
         Queue<TreeNode> queue = new LinkedList<>();
