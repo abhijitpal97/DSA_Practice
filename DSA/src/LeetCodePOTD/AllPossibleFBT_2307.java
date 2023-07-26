@@ -4,7 +4,7 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
-public class AllPossibleFBT {
+public class AllPossibleFBT_2307 {
     Map<Integer, List<TreeNode>> map = new HashMap<>();
     public List<TreeNode> allPossibleFBT(int n) {
         if(! map.containsKey(n))

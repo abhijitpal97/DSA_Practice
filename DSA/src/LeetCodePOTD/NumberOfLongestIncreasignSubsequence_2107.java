@@ -1,6 +1,6 @@
 package LeetCodePOTD;
 
-public class NumberOfLongestIncreasignSubsequence {
+public class NumberOfLongestIncreasignSubsequence_2107 {
     public int findNumberOfLIS(int[] nums) {
         int[][] dp = new int[nums.length][2];
 
