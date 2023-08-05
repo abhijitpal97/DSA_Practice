@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+import com.example.datastructure.skeleton.TreeNode;
+
 public class DistributeCoinNodes {
     int ans = 0;
     public int distributeCoins(TreeNode root) {

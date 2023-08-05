@@ -18,9 +18,9 @@ public class RemoveDuplicateUnsortedList
          
          while(head != null)
          {
-             if(set.add(head.data))
+             if(set.add(head.val))
              {
-                 temp.next = new LinkedListNode(head.data);
+                 temp.next = new LinkedListNode(head.val);
                  temp = temp.next;
                  head = head.next;
              }
