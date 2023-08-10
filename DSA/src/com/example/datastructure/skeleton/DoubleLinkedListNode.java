@@ -11,6 +11,10 @@ public class DoubleLinkedListNode
         this.data = data;
         this.key = key;
     }
+    public DoubleLinkedListNode(int data)
+    {
+        this.data = data;
+    }
 
     public DoubleLinkedListNode(){}
 }
