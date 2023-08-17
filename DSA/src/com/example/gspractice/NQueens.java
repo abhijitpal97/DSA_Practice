@@ -4,47 +4,48 @@ import java.util.*;
 
 public class NQueens {
     public List<List<String>> solveNQueens(int n) {
-        char[][] grid = new char[n][n];
-        for(char[] chars : grid) Arrays.fill(chars , '.');
+        char[][] board = new char[n][n];
+        for(int i=0;i<n;i++) Arrays.fill(board[i] , '.');
         List<List<String>> result = new ArrayList<>();
-        solve(grid , result , n , n , 0);
+        solve(board , n , 0,result);
         return result;
     }
 
-    void solve(char[][] grid , List<List<String>> result , int row , int col , int curr)
+    void solve(char[][] board , int n , int row , List<List<String>> result)
     {
-        if(curr == col)
+        if(row == n)
         {
-            List<String> list = new ArrayList<>();
-            for(int i = 0 ; i<row;i++)
-            {
-                StringBuilder sb = new StringBuilder();
-                for(int j=0;j<col;j++)
-                {
-                    sb.append(grid[i][j]);
-                }
-                list.add(sb.toString());
-            }
-            result.add(new ArrayList<>(list));
+            constructResult(board , result,n);
             return;
         }
-        
-        for(int i=0;i<row;i++)
+        for(int i = 0 ; i<n;i++)
         {
-            if(grid[i][curr] == '.')
+            if(isValid(board , row , i , n))
             {
-                if(isValid(i , curr , row , col , grid))
-                {
-                    grid[i][curr] = 'Q';
-                    solve(grid , result , row , col , curr+1);
-                    grid[i][curr] = '.';
-                }
+                board[row][i] = 'Q';
+                solve(board , n , row+1,result);
+                board[row][i] = '.';
             }
-           
+            
         }
     }
 
-    boolean isValid(int r , int c , int row , int col , char[][] grid)
+    void constructResult(char[][] board , List<List<String>> result,int n)
+    {
+        List<String> list = new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
+            StringBuilder sb = new StringBuilder();
+            for(int j=0;j<n;j++)
+            {
+                sb.append(board[i][j]);
+            }
+            list.add(sb.toString());
+        }
+        result.add(list);
+    }
+
+    boolean isValid(char[][] grid , int r , int c , int n)
     {
         int lR = r;
         int lC = c;
@@ -66,11 +67,20 @@ public class NQueens {
         lR = r;
         lC = c;
 
-        while(lR<row && lC>=0)
+        while(lR>=0 && lC<n)
         {
             if(grid[lR][lC] == 'Q') return false;
-            lC--;
-            lR++;
+            lC++;
+            lR--;
+        }
+
+        lR = r;
+        lC = c;
+
+        while(lR>=0)
+        {
+            if(grid[lR][lC] == 'Q') return false;
+            lR--;
         }
 
         return true;

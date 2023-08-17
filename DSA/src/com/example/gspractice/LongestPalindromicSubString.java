@@ -1,6 +1,6 @@
 package com.example.gspractice;
 
-public class LongestPalindromicSubsequence {
+public class LongestPalindromicSubString {
     public String longestPalindrome(String s) {
         int start = 0;
         int end = 0;
