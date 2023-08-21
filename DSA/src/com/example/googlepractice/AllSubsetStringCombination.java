@@ -6,7 +6,7 @@ public class AllSubsetStringCombination {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<String> list = combination("abba");
+		List<String> list = combination("abc");
 		System.out.println(list);
 
 	}
@@ -19,24 +19,22 @@ public class AllSubsetStringCombination {
 
 		for(char ch : str.toCharArray()) map.put(ch , map.getOrDefault(ch, 0)+1);
 
-		char[] chars = new char[map.size()];
 		int[] count = new int[map.size()];
-		
+
 		char[] res = new char[str.length()];
 		int index=0;
 		for(Map.Entry<Character,Integer> m1 : map.entrySet())
 		{
-			chars[index] = m1.getKey();
 			count[index] = m1.getValue();
 			index++;
 		}
 
-		finalCombination(str , chars , count , res , 0 , map.size(), str.length(), list);
+		finalCombination(str , count , res , 0 , map.size(), str.length(), list);
 
 		return list;
 	}
 
-	private static void finalCombination(String str, char[] chars, 
+	private static void finalCombination(String str,
 			int[] count, char[] res, int curr, int size, int length,
 			List<String> list) {
 
@@ -49,7 +47,7 @@ public class AllSubsetStringCombination {
 			count[i]--;
 			res[curr] = str.charAt(i);
 			addData(res , curr , list);
-			finalCombination(str,chars,count,res,curr+1,size,length,list);
+			finalCombination(str,count,res,curr+1,size,length,list);
 			count[i]++;
 		}
 	}
@@ -63,7 +61,7 @@ public class AllSubsetStringCombination {
 			str +=result[i];
 		}
 		list.add(str);
-		
+
 	}
 
 }

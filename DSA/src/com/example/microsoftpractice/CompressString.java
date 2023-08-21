@@ -30,4 +30,29 @@ public class CompressString {
 		}
 		return sb.length();
 	}
+
+	public static String compressTheString(String s) {
+		// Write your code here
+		StringBuilder sb = new StringBuilder();
+		int n = s.length();
+		for(int i=0;i<n;i++)
+		{
+			int count = 1 ;
+
+			while(i+1 < n && s.charAt(i) == s.charAt(i+1))
+			{
+				i++;
+				count++;
+				if(i>=n) break;
+			}
+			if(count>1)
+			{
+				sb.append(s.charAt(i-1)).append(count);
+
+			} 
+			else sb.append(s.charAt(i));
+		}
+
+		return sb.toString();
+	}
 }
