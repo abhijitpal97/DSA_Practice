@@ -1,11 +1,14 @@
 package com.example.datastructure.skeleton;
 
- public class TreeNode {
+import java.util.List;
+
+public class TreeNode {
      public int val;
      public TreeNode left;
      public TreeNode right;
      public TreeNode random;
      public TreeNode next;
+     public List<TreeNode> children;
      TreeNode() {}
      public TreeNode(int val) { this.val = val; }
      
