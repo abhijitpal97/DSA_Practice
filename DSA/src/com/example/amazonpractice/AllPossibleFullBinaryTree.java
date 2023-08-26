@@ -5,8 +5,15 @@ import java.util.*;
 import com.example.datastructure.skeleton.TreeNode;
 
 public class AllPossibleFullBinaryTree {
-    Map<Integer, List<TreeNode>> map = new HashMap<>();
-    public List<TreeNode> allPossibleFBT(int n) {
+    static Map<Integer, List<TreeNode>> map = new HashMap<>();
+    
+    public static void main(String[] args)
+    {
+    	List<TreeNode> res = allPossibleFBT(2);
+    	System.out.println(res.size());
+    }
+    
+    public static List<TreeNode> allPossibleFBT(int n) {
         if(! map.containsKey(n))
         {
             List<TreeNode> nodes = new ArrayList<>();
@@ -14,7 +21,7 @@ public class AllPossibleFullBinaryTree {
             if(n == 1) nodes.add(new TreeNode(0 , null , null));
             else
             {
-                for(int i = 1 ; i<n ; i+=2)
+                for(int i = 1 ; i<=n-2 ; i++)
                 {
                     List<TreeNode> leftNodes = allPossibleFBT(i);
                     List<TreeNode> rightNodes = allPossibleFBT(n-i-1);

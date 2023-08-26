@@ -6,7 +6,7 @@ public class AllSubsetStringCombination {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<String> list = combination("abc");
+		List<String> list = combination("abca");
 		System.out.println(list);
 
 	}
@@ -21,7 +21,6 @@ public class AllSubsetStringCombination {
 
 		int[] count = new int[map.size()];
 
-		char[] res = new char[str.length()];
 		int index=0;
 		for(Map.Entry<Character,Integer> m1 : map.entrySet())
 		{
@@ -29,14 +28,14 @@ public class AllSubsetStringCombination {
 			index++;
 		}
 
-		finalCombination(str , count , res , 0 , map.size(), str.length(), list);
+		finalCombination(str , count ,  0 , map.size(), str.length(), list , "");
 
 		return list;
 	}
 
 	private static void finalCombination(String str,
-			int[] count, char[] res, int curr, int size, int length,
-			List<String> list) {
+			int[] count, int curr, int size, int length,
+			List<String> list,String ref) {
 
 		if(curr == length) return;
 
@@ -45,20 +44,20 @@ public class AllSubsetStringCombination {
 			if(count[i] == 0) continue;
 
 			count[i]--;
-			res[curr] = str.charAt(i);
-			addData(res , curr , list);
-			finalCombination(str,count,res,curr+1,size,length,list);
+			ref += str.charAt(i);
+			addData(ref , curr , list);
+			finalCombination(str,count,curr+1,size,length,list,ref);
 			count[i]++;
 		}
 	}
 
-	static void addData(char[] result,
+	static void addData(String result,
 			int len, List<String> list)
 	{
 		String str = "";
-		for (int i = 0; i <= len; i++)
+		for (int i = 0; i < result.length(); i++)
 		{
-			str +=result[i];
+			str +=result.charAt(i);
 		}
 		list.add(str);
 

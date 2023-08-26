@@ -3,7 +3,13 @@ package com.example.googlepractice;
 import java.util.*;
 
 public class AllIntegerPermutation {
-    public List<List<Integer>> permute(int[] nums) {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<List<Integer>> result = permute(new int[] {2,3,4,6,2});
+		System.out.println(result);
+	}
+	
+    public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         int[] freq = new int[nums.length];
         solve(nums ,freq , new ArrayList<>() , result);
@@ -11,7 +17,7 @@ public class AllIntegerPermutation {
         return result;
     }
 
-    void solve(int[] nums , int[] freq , List<Integer> list , List<List<Integer>> result)
+    static void solve(int[] nums , int[] freq , List<Integer> list , List<List<Integer>> result)
     {
         if(list.size() == nums.length)
         {
