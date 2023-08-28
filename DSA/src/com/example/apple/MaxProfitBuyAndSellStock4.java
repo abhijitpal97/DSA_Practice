@@ -1,6 +1,6 @@
-package com.example.uncategorized;
+package com.example.apple;
 
-public class Apple_MaxProfitBuyAndSellStock4 {
+public class MaxProfitBuyAndSellStock4 {
     public int maxProfit(int k, int[] prices) {
         Integer[][][] dp = new Integer[prices.length][k][2];
         return function(prices , k , 0 , 1 , dp , 0);        

@@ -1,8 +1,8 @@
-package com.example.uncategorized;
+package com.example.apple;
 
 import java.util.*;
 
-public class Apple_PalindromePairs {
+public class PalindromePairs {
 	
 	// Brute Force - TC -> n^2
     public List<List<Integer>> palindromePairs(String[] words) {

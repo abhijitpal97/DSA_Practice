@@ -1,8 +1,8 @@
-package com.example.uncategorized;
+package com.example.apple;
 
 import java.util.*;
 
-public class Apple_SubstringConcatingAllWord {
+public class SubstringConcatingAllWord {
 	public static void main(String[] args)
 	{
 		List<Integer> res = findSubstring("barfoothefoobarman", new String[] {"foo","bar"});
