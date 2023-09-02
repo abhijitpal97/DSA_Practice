@@ -2,7 +2,7 @@ package com.example.uncategorized;
 
 import java.util.ArrayList;
 
-public class RobinCarkSimilarImpl
+public class RobinKarpSimilarImpl
 {
 	//Can generate hashcode if needed as per RK Algo
 	ArrayList<Integer> search(String pat, String S)
