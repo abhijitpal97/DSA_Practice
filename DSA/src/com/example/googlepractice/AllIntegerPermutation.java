@@ -5,7 +5,7 @@ import java.util.*;
 public class AllIntegerPermutation {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<List<Integer>> result = permute(new int[] {2,3,4,6,2});
+		List<List<Integer>> result = permute(new int[] {1,2,3});
 		System.out.println(result);
 	}
 	
