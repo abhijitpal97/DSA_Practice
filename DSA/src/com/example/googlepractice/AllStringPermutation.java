@@ -6,7 +6,7 @@ public class AllStringPermutation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<String> result = allStringPermutation("AAA");
+		List<String> result = allStringPermutation("ABC");
 		System.out.println(result);
 	}
 
