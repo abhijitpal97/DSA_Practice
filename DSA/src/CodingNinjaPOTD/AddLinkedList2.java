@@ -1,6 +1,7 @@
 package CodingNinjaPOTD;
 
 import com.example.datastructure.skeleton.LinkedListNode;
+// https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1
 
 public class AddLinkedList2 {
 	public static LinkedListNode addTwoLists(LinkedListNode first, LinkedListNode second) {

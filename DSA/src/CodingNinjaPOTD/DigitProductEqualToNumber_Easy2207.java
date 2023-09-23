@@ -2,8 +2,14 @@ package CodingNinjaPOTD;
 import java.util.* ;
 import java.io.*; 
 
+// https://www.codingninjas.com/studio/problems/digit-product_2826440?topList=nishant-chahar-sde-sheet-problems
 public class DigitProductEqualToNumber_Easy2207 {
 
+	public static void main(String[] args)
+	{
+		int res = digitProduct(7164);
+		System.out.println(res);
+	}
 	public static int digitProduct(int n) {
 		// Write your code here.
 		int temp = n;
@@ -17,15 +23,15 @@ public class DigitProductEqualToNumber_Easy2207 {
 		}
 
 		if(temp >9) return -1;
-		
+
 		int ans = 1;
-		
+
 		while(true)
 		{
 			int mul = helper(ans);
-			
+
 			if(mul == n) return ans;
-			
+
 			ans++;
 		}
 	}

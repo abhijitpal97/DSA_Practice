@@ -1,6 +1,7 @@
 package CodingNinjaPOTD;
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/aggressive-cows/1
 public class AggressiveCows_Moderate2107 {
 	public static void main(String[] args)
 	{

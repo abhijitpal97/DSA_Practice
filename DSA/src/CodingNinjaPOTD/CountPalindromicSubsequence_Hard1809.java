@@ -2,6 +2,7 @@ package CodingNinjaPOTD;
 import java.util.* ;
 import java.io.*; 
 
+// https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1
 public class CountPalindromicSubsequence_Hard1809 {
 
 	public static void main(String[] args)

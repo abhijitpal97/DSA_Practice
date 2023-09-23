@@ -1,6 +1,6 @@
 package CodingNinjaPOTD;
- 
 
+// https://www.codingninjas.com/studio/problems/chocolate-and-sweetness_2542078
 public class ChocholateSweetness_Hard1808 {
 	public static int[] chocolatesAndSweetness(int n, int q, int[] expiry, int[] sweetness, int[][] query) {
 		// Write your code here

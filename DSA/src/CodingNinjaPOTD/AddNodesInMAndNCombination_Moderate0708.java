@@ -1,6 +1,7 @@
 package CodingNinjaPOTD;
 
 import com.example.datastructure.skeleton.LinkedListNode;
+// https://www.codingninjas.com/studio/problems/append-nodes_763407
 
 public class AddNodesInMAndNCombination_Moderate0708 {
 

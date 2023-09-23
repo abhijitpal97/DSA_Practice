@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://www.codingninjas.com/studio/problems/convert-bst-to-min-heap_920498?topList=love-babbar-dsa-sheet-problems
+
 public class BinaryTreeToMinHeapPreorder_Moderate1808 {
 	public static TreeNode convertBST(TreeNode root) {
 		// Write your code here.

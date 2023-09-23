@@ -2,15 +2,30 @@ package com.example.gspractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/k-diff-pairs-in-an-array/
+
 public class FindPairsWithKDifference {
-	public int findPairs(int[] nums, int k) {
+
+	public static void main(String[] args)
+	{
+		int count = findPairs(new int[] {3,1,4,1,5}, 2);
+		System.out.println(count);
+
+		count = findPairsTimeOptimized(new int[] {3,1,4,1,5}, 2);
+		System.out.println(count);
+
+		count = findPairsTimeOptimized1(new int[] {3,1,4,1,5}, 2);
+		System.out.println(count);
+	}
+
+	public static int findPairs(int[] nums, int k) {
 		List<List<Integer>> result = new ArrayList<>();
 		calculation(nums, new ArrayList<>(), result , 0 , Integer.MIN_VALUE,k);
 		System.out.println(result);
 		return result.size();
 	}
 
-	void calculation(int[] nums , List<Integer> list , List<List<Integer>> result , int index , int prev,int k)
+	static void calculation(int[] nums , List<Integer> list , List<List<Integer>> result , int index , int prev,int k)
 	{
 		if(list.size() == 2)
 		{
@@ -30,8 +45,32 @@ public class FindPairsWithKDifference {
 		calculation(nums , list , result , index+1 , prev,k);
 	}
 
+	// Time Optimized
+	public static int findPairsTimeOptimized(int[] nums, int k) {
+		Set<Integer> set = new HashSet<>();
+		List<List<Integer>> list = new ArrayList<>();
+		for(int i = 0 ; i<nums.length;i++)
+		{
+			if(set.contains(nums[i]+k))
+			{
+				List<Integer> res = new ArrayList<>(new ArrayList<>(Arrays.asList(nums[i] , nums[i]+k)));
+				if(!list.contains(res)) list.add(res);
+			}
+			if(set.contains(nums[i]-k))
+			{
+				List<Integer> res = new ArrayList<>(new ArrayList<>(Arrays.asList(nums[i]-k , nums[i])));
+				if(!list.contains(res)) list.add(res);
+			}
+			set.add(nums[i]);
+		}
+
+		System.out.println(list);
+		return list.size();
+	}
+
+
 	//Time 
-	public int findPairsTimeOptimized(int[] nums, int k) {
+	public static int findPairsTimeOptimized1(int[] nums, int k) {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int num : nums)
 			map.put(num, map.getOrDefault(num, 0) + 1);
