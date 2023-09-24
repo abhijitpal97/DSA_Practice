@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/arithmetic-slices/
+
 public class ArithmeticSliceWithSameDifference {
 	public int numberOfArithmeticSlices(int[] nums) {
 		int n = nums.length;

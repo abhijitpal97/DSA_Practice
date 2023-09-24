@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/subarray-product-less-than-k/description/
+
 public class ContinuousProductLessThanK {
 	public int numSubarrayProductLessThanK(int[] nums, int k) {
 		if(k<=1) return 0;

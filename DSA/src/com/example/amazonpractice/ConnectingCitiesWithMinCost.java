@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 import java.util.* ;
 import java.io.*; 
 
+// https://www.codingninjas.com/studio/problems/connecting-cities-with-minimum-cost_1386586
+
 class CityPair
 {
 	int dest;

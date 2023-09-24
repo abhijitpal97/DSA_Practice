@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/car-pooling/
+
 public class CarPooling {
 	public boolean carPooling(int[][] trips, int capacity) {
 		Arrays.sort(trips , (a , b) -> a[1] - b[1]);

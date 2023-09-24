@@ -2,18 +2,20 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://www.codingninjas.com/studio/problems/boundary-sum_790724
+
 public class BoundarySum {
 	static int sum = 0;
-	
+
 	public static void main(String[] args)
 	{
 		TreeNode node = new TreeNode(5);
 		node.right = new TreeNode(6);
-		
+
 		int res = boundarySum(node);
 		System.out.println(res);
 	}
-	
+
 	public static int boundarySum(TreeNode root) {
 		// Write your code here.
 		sum = 0;
