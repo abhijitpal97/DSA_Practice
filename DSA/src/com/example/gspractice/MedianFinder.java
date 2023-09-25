@@ -2,31 +2,33 @@ package com.example.gspractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/find-median-from-data-stream/description/
+
 public class MedianFinder {
-    Queue<Integer> minHeap;
-    Queue<Integer> maxHeap;
-    public MedianFinder() {
-        minHeap = new PriorityQueue<>();
-        maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-    }
-    
-    public void addNum(int num) {
-        if(maxHeap.isEmpty() || num<maxHeap.peek()) maxHeap.offer(num);
-        else minHeap.offer(num);    
+	Queue<Integer> minHeap;
+	Queue<Integer> maxHeap;
+	public MedianFinder() {
+		minHeap = new PriorityQueue<>();
+		maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+	}
 
-        balanceHeap();
-    }
+	public void addNum(int num) {
+		if(maxHeap.isEmpty() || num<maxHeap.peek()) maxHeap.offer(num);
+		else minHeap.offer(num);    
 
-    void balanceHeap()
-    {
-        if(maxHeap.size()-minHeap.size()>1) minHeap.offer(maxHeap.poll());
-        else if(minHeap.size()>maxHeap.size()) maxHeap.offer(minHeap.poll());
-    }
-    
-    public double findMedian() {
-        if(maxHeap.isEmpty()) return 0;
-        if(maxHeap.size() == minHeap.size()) return (maxHeap.peek()+minHeap.peek())/2.0;
-        return maxHeap.peek();
-        
-    }
+		balanceHeap();
+	}
+
+	void balanceHeap()
+	{
+		if(maxHeap.size()-minHeap.size()>1) minHeap.offer(maxHeap.poll());
+		else if(minHeap.size()>maxHeap.size()) maxHeap.offer(minHeap.poll());
+	}
+
+	public double findMedian() {
+		if(maxHeap.isEmpty()) return 0;
+		if(maxHeap.size() == minHeap.size()) return (maxHeap.peek()+minHeap.peek())/2.0;
+		return maxHeap.peek();
+
+	}
 }

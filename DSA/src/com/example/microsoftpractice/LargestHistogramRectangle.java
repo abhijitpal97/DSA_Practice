@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.Stack;
 
+// https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+
 public class LargestHistogramRectangle {
     public int largestRectangleArea(int[] heights) {
         int n = heights.length;

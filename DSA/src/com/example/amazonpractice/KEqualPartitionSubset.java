@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://practice.geeksforgeeks.org/problems/partition-array-to-k-subsets/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
 public class KEqualPartitionSubset {
 	public boolean canPartitionKSubsets(int[] nums, int k) {
 		int n = nums.length;

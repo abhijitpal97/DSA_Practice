@@ -2,6 +2,9 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+
+// https://leetcode.com/problems/find-eventual-safe-states/description/
+
 public class EventualSafeState {
 	public List<Integer> eventualSafeNodes(int[][] graph) {
 		List<List<Integer>> adj = new ArrayList<>();

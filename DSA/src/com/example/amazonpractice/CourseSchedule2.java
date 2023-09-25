@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/course-schedule-ii/description/
+
 public class CourseSchedule2 {
 	public int[] findOrder(int numCourses, int[][] prerequisites) {
 		List<List<Integer>> adj = new ArrayList<>();

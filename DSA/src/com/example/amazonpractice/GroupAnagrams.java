@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/group-anagrams/description/
+
 public class GroupAnagrams {
 	public List<List<String>> groupAnagrams(String[] strs) {
 		List<List<String>> result = new ArrayList<>();
