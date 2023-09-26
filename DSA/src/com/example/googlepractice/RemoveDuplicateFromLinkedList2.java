@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
+
 public class RemoveDuplicateFromLinkedList2 {
     public LinkedListNode deleteDuplicates(LinkedListNode head) {
         Stack<Integer> stack = new Stack<>();

@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/generate-parentheses/description/
+
 public class GenerateParenthesisi {
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<>();

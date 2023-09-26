@@ -1,6 +1,9 @@
 package com.example.amazonpractice;
 import java.util.*;
 
+
+// https://leetcode.com/problems/decoded-string-at-index/description/
+
 public class FindKthDecryptedString 
 {
 	public static void main(String[] args)

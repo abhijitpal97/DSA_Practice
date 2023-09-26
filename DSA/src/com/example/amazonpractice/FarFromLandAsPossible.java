@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/as-far-from-land-as-possible/
+
 public class FarFromLandAsPossible {
 	public int maxDistance(int[][] grid) {
 		int[][] dirs = new int[][]{{1,0},{-1,0},{0,1},{0,-1}};

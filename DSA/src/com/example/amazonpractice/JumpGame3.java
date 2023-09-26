@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/jump-game-iii/description/
+
 public class JumpGame3 {
 	public boolean canReach(int[] arr, int start) {
 		return function(arr , start , arr.length,new boolean[arr.length]);

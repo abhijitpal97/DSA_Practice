@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 import java.util.* ;
 import java.io.*; 
 
+// https://practice.geeksforgeeks.org/problems/delete-middle-element-of-a-stack/1
+
 public class DeleteMiddleOfStack {
 	public static void deleteMiddle(Stack<Integer> inputStack, int N) {
 		// WRITE YOUR CODE HERE

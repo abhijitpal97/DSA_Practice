@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/critical-connections-in-a-network/description/
+
 public class CriticalConnection {
 	public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
 		List<List<Integer>> list = new ArrayList<>();

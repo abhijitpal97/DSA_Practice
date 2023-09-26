@@ -2,7 +2,9 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.DoubleLinkedListNode;
 
-class MyCircularQueue {
+// https://leetcode.com/problems/design-circular-queue/description/
+
+public class MyCircularQueue {
 	DoubleLinkedListNode head = new DoubleLinkedListNode();
 	DoubleLinkedListNode tail = new DoubleLinkedListNode();
 	int k;

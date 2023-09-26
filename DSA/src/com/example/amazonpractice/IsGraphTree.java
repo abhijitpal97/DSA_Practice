@@ -1,6 +1,8 @@
 package com.example.amazonpractice;
 import java.util.* ;
 
+// https://www.codingninjas.com/studio/problems/is-graph-tree_1115787?leftPanelTab=2
+
 public class IsGraphTree {
     public static boolean isGraphTree(int n, ArrayList<ArrayList<Integer>> edgeList) {
         // Write your code here.

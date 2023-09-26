@@ -2,35 +2,37 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/insert-into-a-binary-search-tree/description/
+
 public class InsertNodeIntoBST {
-    public TreeNode insertIntoBST(TreeNode root, int val) {
-        if(root == null) return new TreeNode(val);
+	public TreeNode insertIntoBST(TreeNode root, int val) {
+		if(root == null) return new TreeNode(val);
 
-        TreeNode curr = root;
+		TreeNode curr = root;
 
-        while(true)
-        {
-            if(curr.val < val)
-            {
-                if(curr.right != null) curr=curr.right;
-                else
-                {
-                    curr.right = new TreeNode(val);
-                    break;
-                }
+		while(true)
+		{
+			if(curr.val < val)
+			{
+				if(curr.right != null) curr=curr.right;
+				else
+				{
+					curr.right = new TreeNode(val);
+					break;
+				}
 
-            }
-            else
-                {
-                    if(curr.left !=null) curr = curr.left;
-                    else
-                    {
-                        curr.left = new TreeNode(val);
-                        break;
-                    }
-                }
-        }
+			}
+			else
+			{
+				if(curr.left !=null) curr = curr.left;
+				else
+				{
+					curr.left = new TreeNode(val);
+					break;
+				}
+			}
+		}
 
-        return root;
-    }
+		return root;
+	}
 }

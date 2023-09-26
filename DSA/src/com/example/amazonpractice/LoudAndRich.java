@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/loud-and-rich/
+
 public class LoudAndRich {
 	public int[] loudAndRich(int[][] richer, int[] quiet) {
 		int n = quiet.length;

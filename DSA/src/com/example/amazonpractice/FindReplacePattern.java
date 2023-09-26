@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/find-and-replace-pattern/
+
 public class FindReplacePattern {
 
 	public static void main(String[] args)

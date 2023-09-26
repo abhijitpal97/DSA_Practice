@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/increasing-triplet-subsequence/description/?envType=study-plan&id=data-structure-ii
+
 public class IncreasingTriplet {
 	public boolean increasingTriplet(int[] nums) {
 		int n = nums.length;

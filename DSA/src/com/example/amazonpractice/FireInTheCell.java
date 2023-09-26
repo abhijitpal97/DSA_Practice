@@ -1,6 +1,7 @@
 package com.example.amazonpractice;
 import java.util.*;
 
+// https://www.codingninjas.com/studio/problems/fire-in-the-cells_920460
 public class FireInTheCell {
 	public static void main(String[] args)
 	{

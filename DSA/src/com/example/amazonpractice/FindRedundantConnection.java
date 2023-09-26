@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/redundant-connection/
+
 public class FindRedundantConnection {
 	public int[] findRedundantConnection(int[][] edges) {
 		int n = edges.length;

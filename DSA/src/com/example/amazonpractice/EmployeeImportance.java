@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/employee-importance/
+
 class EmployeeImp {
 	public int id;
 	public int importance;

@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/integer-replacement/description/
+
 class PairReplacement
 {
 	long num;
