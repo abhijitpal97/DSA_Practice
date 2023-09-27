@@ -3,6 +3,8 @@ package com.example.amazonpractice;
 import com.example.datastructure.skeleton.LinkedListNode;
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/linked-list-in-binary-tree/?envType=study-plan&id=programming-skills-ii
+
 public class LinkedListInBinaryTree {
 	public boolean isSubPath(LinkedListNode head, TreeNode root) {
 		if(head == null && root == null) return true;

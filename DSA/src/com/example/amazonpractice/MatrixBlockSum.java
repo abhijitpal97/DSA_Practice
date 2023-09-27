@@ -1,39 +1,41 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/matrix-block-sum/description/
+
 public class MatrixBlockSum {
-    public int[][] matrixBlockSum(int[][] mat, int k) {
-        int row = mat.length;
-        int col = mat[0].length;
-        
-        int[][] answer = new int[row][col];
+	public int[][] matrixBlockSum(int[][] mat, int k) {
+		int row = mat.length;
+		int col = mat[0].length;
 
-        for(int i=0;i<row;i++)
-        {
-            for(int j=0;j<col;j++)
-            {
-                int l = Math.max(0 , j-k);
-                int r = Math.min(col-1 , j+k);
-                int u= Math.max(0 , i-k);
-                int d = Math.min(row-1 , i+k);
+		int[][] answer = new int[row][col];
 
-                answer[i][j] = sum(mat , l , r , u , d);
-            }
-        }
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<col;j++)
+			{
+				int l = Math.max(0 , j-k);
+				int r = Math.min(col-1 , j+k);
+				int u= Math.max(0 , i-k);
+				int d = Math.min(row-1 , i+k);
 
-        return answer;
-    }
+				answer[i][j] = sum(mat , l , r , u , d);
+			}
+		}
 
-    int sum(int[][] mat , int l , int r , int u , int d)
-    {
-        int s = 0;
-        for(int i = u ; i<=d ; i++)
-        {
-            for(int j = l ; j<=r;j++)
-            {
-                s +=mat[i][j];
-            }
-        }
+		return answer;
+	}
 
-        return s;
-    }
+	int sum(int[][] mat , int l , int r , int u , int d)
+	{
+		int s = 0;
+		for(int i = u ; i<=d ; i++)
+		{
+			for(int j = l ; j<=r;j++)
+			{
+				s +=mat[i][j];
+			}
+		}
+
+		return s;
+	}
 }

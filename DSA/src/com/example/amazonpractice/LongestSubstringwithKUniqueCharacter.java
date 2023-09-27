@@ -1,6 +1,8 @@
 package com.example.amazonpractice;
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
 public class LongestSubstringwithKUniqueCharacter {
 	public static int getLengthofLongestSubstring(int k, String s) {
 		// Write your code here.

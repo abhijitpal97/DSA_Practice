@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 import java.util.* ;
 import java.io.*; 
 
+// https://www.codingninjas.com/studio/problems/longest-decreasing-subsequence_800300
+
 public class LongestDecreasingSubsequence {
 	public static int LDS(int[] arr) {
 		// Write your code here.

@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://www.codingninjas.com/studio/problems/leaves-one-level-apart_764389
+
 public class LeavesOneLevelApart {
 	static int max = Integer.MIN_VALUE;
 	static int min = Integer.MAX_VALUE;

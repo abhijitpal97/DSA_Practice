@@ -11,28 +11,33 @@ public class LastStoneWeight2 {
 	}
 
 	public static int lastStoneWeightII(int[] stones) {
-		if(stones.length == 1) return stones[0];
+		int sum = 0 ;
+		int n = stones.length;
 
-		Queue<Integer> queue = new PriorityQueue<>((a,b) -> b-a);
+		for(int i : stones) sum +=i;
 
-		for(int i : stones) queue.offer(i);
+		Integer[][] dp = new Integer[n+1][sum];
 
-		while(queue.size() != 1)
+		int a = function(stones , n , sum/2 , 0 , dp);
+		int b = sum - a;
+
+		return Math.abs(a-b);
+	}
+
+	static int function(int[] stones , int n , int target , int index , Integer[][] dp)
+	{
+		if(index>= n || target<0) return 0;
+
+		if(dp[index][target] != null) return dp[index][target];
+
+		int a = function(stones , n , target , index+1 , dp);
+		if(target>=stones[index])
 		{
-			int bigger = queue.poll();
-			int smaller = queue.poll();
+			int b = stones[index]+function(stones , n , target-stones[index] , index+1 , dp);
 
-
-			if(bigger>smaller) 
-			{
-				bigger = bigger-smaller;
-				queue.offer(bigger);
-			}
-
-
-			if(queue.isEmpty()) return -1;
+			return dp[index][target] = Math.max(a,b);
 		}
 
-		return queue.peek();
+		return dp[index][target] = a;
 	}
 }

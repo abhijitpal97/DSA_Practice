@@ -1,6 +1,8 @@
 package com.example.amazonpractice;
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
+
 public class LoopInUndirectedGraph {
 	static class Graph {
 		boolean detectCycle(int V, List<List<Integer>> adj) {

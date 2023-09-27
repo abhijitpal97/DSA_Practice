@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/find-k-pairs-with-smallest-sums/
+
 class SmallSumTuple
 {
 	int n1;

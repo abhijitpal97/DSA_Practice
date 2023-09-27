@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/longest-increasing-subsequence/description/
+
 public class LongestIncreasignSubsequence {
     
 	public static void main(String[] args)

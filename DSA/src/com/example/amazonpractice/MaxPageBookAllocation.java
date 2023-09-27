@@ -1,5 +1,6 @@
 package com.example.amazonpractice;
 
+// https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
 public class MaxPageBookAllocation 
 {
 	//Function to find minimum number of pages.

@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/
+
 public class MaxScoreWithMultiplyOperation {
     public int maximumScore(int[] nums, int[] multipliers) {
         int n = nums.length;
