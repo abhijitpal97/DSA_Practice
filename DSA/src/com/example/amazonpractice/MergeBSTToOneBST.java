@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/merge-bsts-to-create-single-bst/description/
+
 public class MergeBSTToOneBST {
 	public TreeNode canMerge(List<TreeNode> trees) {
 		List<Integer> list = new ArrayList<>();

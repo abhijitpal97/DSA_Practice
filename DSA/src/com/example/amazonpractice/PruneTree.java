@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/binary-tree-pruning/
+
 public class PruneTree {
 	public static void main(String[] args)
 	{

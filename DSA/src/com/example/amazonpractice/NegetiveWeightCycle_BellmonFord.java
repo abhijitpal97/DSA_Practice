@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.Arrays;
 
+// https://practice.geeksforgeeks.org/problems/negative-weight-cycle3504/1
+
 public class NegetiveWeightCycle_BellmonFord
 {	    
 	public static void main(String[] args)

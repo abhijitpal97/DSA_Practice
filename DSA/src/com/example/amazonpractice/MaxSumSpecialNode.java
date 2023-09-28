@@ -2,6 +2,7 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://practice.geeksforgeeks.org/problems/maximum-path-sum/1
 public class MaxSumSpecialNode
 {
 	int[] max = new int[1]; 

@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/minimum-increment-to-make-array-unique/
+
 public class MinIncrementToMakeArrayUnique {
 	public int minIncrementForUnique(int[] nums) {
 		// 1 1 2 2 3 7 

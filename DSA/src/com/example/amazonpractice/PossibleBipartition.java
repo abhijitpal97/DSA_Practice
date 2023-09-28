@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/bipartite-graph/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
 public class PossibleBipartition
 {
 	public boolean isBipartite(int V, ArrayList<ArrayList<Integer>>adj)

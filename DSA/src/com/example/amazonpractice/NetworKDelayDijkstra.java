@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/network-delay-time/
+
 class NetworkPair
 {
 	int index;

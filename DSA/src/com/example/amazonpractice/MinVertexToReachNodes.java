@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
+
 public class MinVertexToReachNodes {
 
 	public static void main(String[] args)

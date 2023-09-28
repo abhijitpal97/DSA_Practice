@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/most-profit-assigning-work/
+
 class ProfitAssignPair
 {
 	int diff;

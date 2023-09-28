@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://www.codingninjas.com/studio/problems/m-coloring-problem_981273
+
 public class MColoringProblem {
 	public static String graphColoring(int [][]mat, int m) {
 		// Write your code here

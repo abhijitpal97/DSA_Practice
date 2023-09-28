@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/path-with-minimum-effort/
+
 class MinimumPathTuple
 {
 	int row;
