@@ -1,6 +1,8 @@
 package CodingNinjaPOTD;
 import java.util.*;
 
+// https://www.codingninjas.com/studio/problems/longest-repeating-substring_980523
+
 public class LongestRepeatingSubstringWithKFlip_Moderate1709 {
 	public static int longestRepeatingSubstring(String str, int k) {
 		// Write your code here.

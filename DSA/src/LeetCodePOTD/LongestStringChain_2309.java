@@ -2,6 +2,8 @@ package LeetCodePOTD;
 
 import java.util.*;
 
+// https://leetcode.com/problems/longest-string-chain/description/
+
 public class LongestStringChain_2309 {
 	public static void main(String[] args) {
 		longestStrChain(new String[] {"a","b","ba","bca","bda","bdca"});

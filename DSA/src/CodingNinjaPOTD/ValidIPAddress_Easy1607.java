@@ -1,6 +1,8 @@
 package CodingNinjaPOTD;
 
 
+// https://www.codingninjas.com/studio/problems/program-to-validate-ip-address_981315
+
 public class ValidIPAddress_Easy1607 {
 
 	static boolean inRange(String s){
@@ -81,6 +83,28 @@ public class ValidIPAddress_Easy1607 {
 
 		return true;
 
+	}
+
+	// Using Try - Catch
+	public static boolean isValidIPv4WithErrorBlock(String ipAddress) {
+		// write your code here
+		String[] strs = ipAddress.split("\\.");
+		if(strs.length != 4) return false;
+		for(String str : strs)
+		{
+			int i = 0;
+			try
+			{
+				i = Integer.valueOf(str);
+			}
+			catch(Exception e)
+			{
+				return false;
+			}
+			if(i<0 || i>255) return false;
+		}
+
+		return true;
 	}
 
 }

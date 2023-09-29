@@ -1,5 +1,7 @@
 package CodingNinjaPOTD;
 
+// https://www.codingninjas.com/studio/problems/longest-prefix-which-is-suffix_3146849
+
 public class LongestPrefixSuffix_Moderate1809 {
 
 	public static void main(String[] args)

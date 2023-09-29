@@ -1,5 +1,7 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/shortest-path-with-alternating-colors/
+
 import java.util.*;
 
 class Pair

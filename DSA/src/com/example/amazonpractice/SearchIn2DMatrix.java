@@ -1,20 +1,22 @@
 package com.example.amazonpractice;
 
+// https://leetcode.com/problems/search-a-2d-matrix/
+
 public class SearchIn2DMatrix {
-    public boolean searchMatrix(int[][] matrix, int target) {
-        int row = matrix.length;
-        int col = matrix[0].length;
+	public boolean searchMatrix(int[][] matrix, int target) {
+		int row = matrix.length;
+		int col = matrix[0].length;
 
-        int sRow = 0;
-        int sCol = col-1;
+		int sRow = 0;
+		int sCol = col-1;
 
-        while(sRow<row && sCol>=0)
-        {
-          if(target<matrix[sRow][sCol]) sCol--;
-          else if(target>matrix[sRow][sCol]) sRow++;
-          else return true;
-        }
+		while(sRow<row && sCol>=0)
+		{
+			if(target<matrix[sRow][sCol]) sCol--;
+			else if(target>matrix[sRow][sCol]) sRow++;
+			else return true;
+		}
 
-        return false;
-    }
+		return false;
+	}
 }

@@ -1,5 +1,9 @@
 package CodingNinjaPOTD;
 
+import com.example.datastructure.skeleton.TrieNode;
+
+// https://leetcode.com/problems/longest-common-prefix/description/
+
 public class LongestCommonPrefix_Moderate2808 {
 	public static String longestCommonPrefix(String[] arr, int n) {
 		// Write your code here
@@ -37,4 +41,52 @@ public class LongestCommonPrefix_Moderate2808 {
 		return str.substring(0 , i);
 	}
 
+	// Using TrieNode
+
+	TrieNode root = new TrieNode();
+	public String longestCommonPrefix(String[] strs) {
+		insert(strs[0]);
+		String max = strs[0];
+		for(String str : strs)
+		{
+			String curr = search(str);
+			if(curr.length()<max.length())
+			{
+				max = curr;
+			}
+		}
+
+		return max;
+	}
+
+	void insert(String str)
+	{
+		TrieNode curr = root;
+
+		for(char ch : str.toCharArray())
+		{
+			if(curr.childrens[ch - 'a'] == null)
+			{
+				TrieNode temp = new TrieNode();
+				curr.childrens[ch-'a'] = temp;
+			}
+			curr = curr.childrens[ch-'a'];
+		}
+		curr.isEndOfWord = true;
+	}
+
+	String search(String str)
+	{
+		TrieNode curr = root;
+		String word = "";
+		for(char ch : str.toCharArray())
+		{
+			if(curr.childrens[ch-'a'] == null) return word;
+
+			word += ch;
+			curr = curr.childrens[ch-'a'];
+		}
+
+		return word;
+	}
 }

@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/non-overlapping-intervals/description/
+
 public class RemoveMinimumOverlappingInterval {
 	public int eraseOverlapIntervals(int[][] intervals) {
 		Arrays.sort(intervals , (a,b) -> a[0]-b[0]);

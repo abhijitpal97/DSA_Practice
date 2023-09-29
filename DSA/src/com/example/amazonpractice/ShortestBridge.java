@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/shortest-bridge/description/
+
 public class ShortestBridge {
 	public int shortestBridge(int[][] grid) {
 		Queue<int[]> queue = new LinkedList<>();

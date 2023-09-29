@@ -1,5 +1,7 @@
 package CodingNinjaPOTD;
 
+// https://www.codingninjas.com/studio/problems/palindrome-partitioning_873266
+
 public class PalindromePartitioning2_Hard1609 {
 
 	public static void main(String[] args)

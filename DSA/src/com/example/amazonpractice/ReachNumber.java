@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/reach-a-number/description/
+
 class ReachTuple
 {
 	int index ;
