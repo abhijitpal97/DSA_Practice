@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/subarray-sum-equals-k/description/
+
 public class SubArraySumK {
 	public int subarraySum(int[] nums, int k) {
 		Map<Integer,Integer> map = new HashMap<>();

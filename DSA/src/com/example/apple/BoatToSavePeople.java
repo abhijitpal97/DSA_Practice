@@ -2,6 +2,8 @@ package com.example.apple;
 
 import java.util.*;
 
+// https://leetcode.com/problems/boats-to-save-people/description/
+
 public class BoatToSavePeople {
 	public static void main(String[] args)
 	{

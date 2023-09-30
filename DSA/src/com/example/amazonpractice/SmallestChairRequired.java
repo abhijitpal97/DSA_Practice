@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/
+
 class Person {
 	int seat;
 	int leaveTime;
@@ -15,27 +17,35 @@ class Person {
 public class SmallestChairRequired {
 	public int smallestChair(int[][] times, int targetFriend) {
 
-		int targetTime = times[targetFriend][0];
+		int endTime = times[targetFriend][0];
 		Arrays.sort(times , (a,b) -> a[0] - b[0]);
-		int chair = 0;
-		Queue<Integer> pq = new PriorityQueue<>();
-		Queue<Person> occupied = new PriorityQueue<>((x, y) -> x.leaveTime - y.leaveTime);
+		Queue<Integer> available = new PriorityQueue<>();
+		for(int i =0 ;i<times.length;i++) available.offer(i);
 
-		for(int i = 0 ; i<times.length ; i++)
+		Queue<Person> occupied = new PriorityQueue<>((a,b) -> a.leaveTime-b.leaveTime);
+
+
+		int chair = 0;
+
+		for(int i=0;i<times.length;i++)
 		{
 			int[] curr = times[i];
 
-			while(! pq.isEmpty() && occupied.peek().leaveTime<=curr[0])
+			while(!occupied.isEmpty() && occupied.peek().leaveTime<=curr[0])
 			{
-				int seat = occupied.poll().seat;
-				pq.add(seat);
+				available.offer(occupied.poll().seat);
 			}
 
-			if(curr[0] == targetTime) return !pq.isEmpty()? pq.peek() : chair++;
+			if(endTime == curr[0])
+			{
+				return available.peek();
+			}
 
-			occupied.add(new Person(!pq.isEmpty() ? pq.poll() : chair++ , curr[1]));
+			occupied.offer(new Person(available.poll() , curr[1]));
 		}
 
 		return 0;
+
+
 	}
 }

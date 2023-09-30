@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/trim-a-binary-search-tree/description/
+
 public class TrimTreeNodeBoundaryValue {
 	public TreeNode trimBST(TreeNode root, int low, int high) {
 		if(root==null){

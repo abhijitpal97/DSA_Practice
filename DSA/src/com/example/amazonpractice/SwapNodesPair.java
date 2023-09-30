@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/swap-nodes-in-pairs/description/
+
 public class SwapNodesPair {
 	public LinkedListNode swapPairs(LinkedListNode head) {
 		int count = 0;

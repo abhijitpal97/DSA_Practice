@@ -1,6 +1,7 @@
 package com.example.amazonpractice;
 import java.util.*;
 
+// https://www.codingninjas.com/studio/problems/water-supply-in-a-village_1380956
 
 class WaterPair
 {

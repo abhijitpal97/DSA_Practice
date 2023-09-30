@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/
+
 public class SwapNodesLinkedList {
 
 	public static void main(String[] args)

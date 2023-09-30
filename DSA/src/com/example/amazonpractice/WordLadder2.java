@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/word-ladder-ii/1
+
 public class WordLadder2
 {
 	public ArrayList<ArrayList<String>> findSequences(String startWord, String targetWord, String[] wordList)
@@ -31,8 +33,7 @@ public class WordLadder2
 
 			if(word.equals(targetWord))
 			{
-				if(ans.isEmpty()) ans.add(curr);
-				else if(ans.get(0).size() == curr.size()) ans.add(curr);
+				ans.add(curr);
 			}
 
 			for(int i = 0; i<word.length();i++)

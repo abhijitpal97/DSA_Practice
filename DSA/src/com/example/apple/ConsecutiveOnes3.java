@@ -1,5 +1,7 @@
 package com.example.apple;
 
+// https://leetcode.com/problems/max-consecutive-ones-iii/description/
+
 public class ConsecutiveOnes3 {
 	public int longestOnes(int[] nums, int k) {
 		int start = 0;

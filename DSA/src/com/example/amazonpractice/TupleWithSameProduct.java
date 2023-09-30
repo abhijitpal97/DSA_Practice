@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/tuple-with-same-product/description/
+
 public class TupleWithSameProduct {
 
 	public static void main(String[] args)
