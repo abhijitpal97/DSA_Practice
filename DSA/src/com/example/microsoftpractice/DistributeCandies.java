@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/distribute-candies/description/
+
 public class DistributeCandies {
 	public static void main(String[] args)
 	{

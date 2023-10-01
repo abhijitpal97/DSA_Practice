@@ -2,6 +2,8 @@ package CodingNinjaPOTD;
 
 import java.util.*;
 
+// https://www.codingninjas.com/studio/problems/equal-candies_1467692
+
 public class DistributeEqualCandyCost_Moderate1707 {
 
 	public static long equalCandies (ArrayList<Integer> candies, int n) {

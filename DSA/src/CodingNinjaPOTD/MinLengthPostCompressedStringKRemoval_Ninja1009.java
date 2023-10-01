@@ -2,12 +2,14 @@ package CodingNinjaPOTD;
 import java.util.* ;
 import java.io.*; 
 
+// https://www.codingninjas.com/studio/problems/minimum-length-of-compressed-string_893033
+
 public class MinLengthPostCompressedStringKRemoval_Ninja1009 {
 
 	public static void main(String[] args)
 	{
 		int res = minLengthOfCompressedString("goofood", 1);
-		System.out.println(res);;
+		System.out.println(res);
 	}
 
 	public static int minLengthOfCompressedString(String str, int k)  {
@@ -36,13 +38,13 @@ public class MinLengthPostCompressedStringKRemoval_Ninja1009 {
 		int n = str.length();
 		for(int i=0;i<n;i++)
 		{
-			int count = 1;
+			int count = 0;
 			while(i+1 < n && str.charAt(i)==str.charAt(i+1))
 			{
 				i++;
 				count++;
 			}
-			if(count>1) 
+			if(count>0) 
 			{
 				sb.append(str.charAt(i)).append(count);
 				pq.offer(count+1);

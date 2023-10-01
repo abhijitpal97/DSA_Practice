@@ -2,6 +2,8 @@ package com.example.apple;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/smallest-string-starting-from-leaf/description/
+
 public class SmallestStringFromLeaf {
 	String ans = "";
 	public String smallestFromLeaf(TreeNode root) {

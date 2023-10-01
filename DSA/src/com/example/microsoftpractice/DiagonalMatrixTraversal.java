@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/diagonal-traverse/description/
+
 public class DiagonalMatrixTraversal {
 	public int[] findDiagonalOrder(int[][] mat) {
 		int row = mat.length;

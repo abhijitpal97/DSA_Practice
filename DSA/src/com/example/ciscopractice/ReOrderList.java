@@ -2,60 +2,62 @@ package com.example.ciscopractice;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/reorder-list/description/
+
 public class ReOrderList {
-    public void reorderList(LinkedListNode head) {
-        if(head == null) return ;
-        if(head.next == null) return ;
-        if(head.next.next == null) return ;
+	public void reorderList(LinkedListNode head) {
+		if(head == null) return ;
+		if(head.next == null) return ;
+		if(head.next.next == null) return ;
 
-        LinkedListNode middle = getMiddle(head);
-        //System.out.println(middle.val);
-        LinkedListNode part2 = middle.next;
-        //System.out.println(" - "+part2.val);
-        middle.next = null;
-        part2 = reverse(part2);
+		LinkedListNode middle = getMiddle(head);
+		//System.out.println(middle.val);
+		LinkedListNode part2 = middle.next;
+		//System.out.println(" - "+part2.val);
+		middle.next = null;
+		part2 = reverse(part2);
 
-        LinkedListNode result = head;
-        LinkedListNode temp = null;
-        
-        while(part2 != null)
-        {
-            temp = result.next;
-            result.next =part2;
-            part2 = part2.next;
-            result.next.next = temp;
-            result = result.next.next;
-        }
-    }
+		LinkedListNode result = head;
+		LinkedListNode temp = null;
 
-    LinkedListNode getMiddle(LinkedListNode node)
-    {
-        LinkedListNode slow = node;
-        LinkedListNode fast = node;
+		while(part2 != null)
+		{
+			temp = result.next;
+			result.next =part2;
+			part2 = part2.next;
+			result.next.next = temp;
+			result = result.next.next;
+		}
+	}
 
-        while(fast != null && fast.next != null)
-        {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
+	LinkedListNode getMiddle(LinkedListNode node)
+	{
+		LinkedListNode slow = node;
+		LinkedListNode fast = node;
 
-        return slow;
-    }
+		while(fast != null && fast.next != null)
+		{
+			slow = slow.next;
+			fast = fast.next.next;
+		}
 
-    LinkedListNode reverse(LinkedListNode node)
-    {
-        LinkedListNode curr = node;
-        LinkedListNode prev = null;
-        LinkedListNode temp = null;
+		return slow;
+	}
 
-        while(curr != null)
-        {
-            temp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = temp;
-        }
+	LinkedListNode reverse(LinkedListNode node)
+	{
+		LinkedListNode curr = node;
+		LinkedListNode prev = null;
+		LinkedListNode temp = null;
 
-        return prev;
-    }
+		while(curr != null)
+		{
+			temp = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = temp;
+		}
+
+		return prev;
+	}
 }

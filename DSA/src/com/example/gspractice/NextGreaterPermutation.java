@@ -1,11 +1,13 @@
 package com.example.gspractice;
 
+// https://leetcode.com/problems/next-permutation/
+
 public class NextGreaterPermutation {
 	public void nextPermutation(int[] nums) {
 		int idx = -1;
 		int n = nums.length;
 
-		for(int i = n-2;i>=0;i--)
+		for(int i = n-2;i>=0;i--)	
 		{
 			if(nums[i]<nums[i+1])
 			{
