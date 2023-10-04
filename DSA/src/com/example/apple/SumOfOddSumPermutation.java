@@ -2,6 +2,8 @@ package com.example.apple;
 
 import java.util.*;
 
+// https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/description/
+
 public class SumOfOddSumPermutation {
 	static int MOD = 1000000007;
 	static int count =0;

@@ -2,6 +2,8 @@ package com.example.apple;
 
 import java.util.*;
 
+// https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/description/
+
 public class NumOfPairsDivisible {
 	public int numPairsDivisibleBy60(int[] time) {
 		int count = 0;

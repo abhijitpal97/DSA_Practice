@@ -2,6 +2,8 @@ package com.example.apple;
 
 import java.util.*;
 
+// https://leetcode.com/problems/find-and-replace-pattern/description/
+
 public class FindAndReplacePattern {
 
 	public static void main(String[] args)

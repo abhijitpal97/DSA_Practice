@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/string-compression/description/
+
 public class CompressString {
 	public int compress(char[] chars) {
 		if(chars.length==1) return 1;

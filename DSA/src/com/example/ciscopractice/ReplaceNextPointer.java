@@ -4,29 +4,31 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
+
 public class ReplaceNextPointer {
-    public TreeNode connect(TreeNode root) {
-        if(root == null) return null;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
+	public TreeNode connect(TreeNode root) {
+		if(root == null) return null;
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.offer(root);
 
-        while(! queue.isEmpty())
-        {
-            int size = queue.size();
-            TreeNode prev = null;
-        
-            for(int i=0;i<size;i++)
-            {
-                TreeNode TreeNode = queue.poll();
-                TreeNode.next = prev;
-                prev = TreeNode;
+		while(! queue.isEmpty())
+		{
+			int size = queue.size();
+			TreeNode prev = null;
 
-                if(TreeNode.right != null) queue.offer(TreeNode.right);
-                if(TreeNode.left != null) queue.offer(TreeNode.left);
-            }
-        }
+			for(int i=0;i<size;i++)
+			{
+				TreeNode TreeNode = queue.poll();
+				TreeNode.next = prev;
+				prev = TreeNode;
 
-        return root;
-        
-    }
+				if(TreeNode.right != null) queue.offer(TreeNode.right);
+				if(TreeNode.left != null) queue.offer(TreeNode.left);
+			}
+		}
+
+		return root;
+
+	}
 }

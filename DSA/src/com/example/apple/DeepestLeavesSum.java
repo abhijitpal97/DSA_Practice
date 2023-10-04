@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/deepest-leaves-sum/description/
+
 public class DeepestLeavesSum {
 	public int deepestLeavesSum(TreeNode root) {
 		Queue<TreeNode> queue = new LinkedList<>();

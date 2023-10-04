@@ -2,6 +2,8 @@ package com.example.apple;
 
 import java.util.*;
 
+// https://leetcode.com/problems/contiguous-array/description/
+
 public class ContinuousEqualZeroOne {
 	public int findMaxLength(int[] nums) {
 		for(int i = 0;i<nums.length;i++)

@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1
+
 public class MatrixChainMultiplication{
 	static int matrixMultiplication(int N, int arr[])
 	{
@@ -14,7 +16,7 @@ public class MatrixChainMultiplication{
 
 		for(int i = start ; i<end ; i++)
 		{
-			int steps = arr[start-1] * arr[i]*arr[end] +
+			int steps = arr[start-1] * arr[i] * arr[end] +
 					function(arr , start , i) + function(arr , i+1 , end);
 			if(min>steps) min = steps;
 		}

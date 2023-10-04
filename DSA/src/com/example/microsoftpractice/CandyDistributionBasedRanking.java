@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/candy/description/
+
 public class CandyDistributionBasedRanking {
 	public int candy(int[] A) {
 		int n = A.length;

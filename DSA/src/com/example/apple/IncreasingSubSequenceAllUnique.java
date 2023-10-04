@@ -2,6 +2,8 @@ package com.example.apple;
 
 import java.util.*;
 
+// https://leetcode.com/problems/non-decreasing-subsequences/description/
+
 public class IncreasingSubSequenceAllUnique {
 	public List<List<Integer>> findSubsequences(int[] nums) {
 		List<List<Integer>> result = new ArrayList<>();
