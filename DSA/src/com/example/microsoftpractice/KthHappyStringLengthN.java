@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/
+
 public class KthHappyStringLengthN {
 	static boolean flag = false;
 	static String res = "";

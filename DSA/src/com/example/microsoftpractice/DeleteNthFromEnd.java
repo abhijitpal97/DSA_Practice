@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+
 public class DeleteNthFromEnd {
 	public LinkedListNode removeNthFromEnd(LinkedListNode head, int n) {
 		LinkedListNode curr = head;

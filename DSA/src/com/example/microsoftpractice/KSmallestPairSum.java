@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/
+
 class TupleKSmallest
 {
 	int a;
