@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://www.geeksforgeeks.org/longest-subsegment-1s-formed-changing-k-0s/
+
 public class LongestOnesWithKFlip {
 	public int longestOnes(int[] nums, int k) {
 		int left = 0;

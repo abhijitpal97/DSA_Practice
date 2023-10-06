@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/description/
+
 public class MaxDistancePair {
 	// Memory Limit Exceed - 
 	//TC - mnlog(mn)

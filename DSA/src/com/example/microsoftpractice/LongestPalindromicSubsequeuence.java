@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/longest-palindromic-subsequence/description/
+
 public class LongestPalindromicSubsequeuence {
 	public int longestPalindromeSubseq(String s) {
 		String str = "";

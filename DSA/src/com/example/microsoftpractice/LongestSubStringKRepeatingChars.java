@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/description/
+
 public class LongestSubStringKRepeatingChars {
 	public int longestSubstring(String s, int k) {
 		int n = s.length();

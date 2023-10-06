@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+
 public class MinInsertPalindromeString {
 	public int minInsertions(String s) {
 		int len = s.length();

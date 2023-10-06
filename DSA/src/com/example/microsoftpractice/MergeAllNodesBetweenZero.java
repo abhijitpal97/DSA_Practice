@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/merge-nodes-in-between-zeros/description/
+
 public class MergeAllNodesBetweenZero {
 	public LinkedListNode mergeNodes(LinkedListNode head) {
 

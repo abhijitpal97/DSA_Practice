@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/maximize-distance-to-closest-person/description/
+
 public class MaxDistanceToClosestPerson {
 	public int maxDistToClosest(int[] seats) {
 		int n = seats.length;

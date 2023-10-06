@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/
+
 public class MakeArrayEqual {
 	public int minMoves2(int[] nums) {
 		int n = nums.length;
