@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/minimum-swaps/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
 class SwapPair
 {
 	int nums;

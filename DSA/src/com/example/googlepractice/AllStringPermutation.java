@@ -2,6 +2,8 @@ package com.example.googlepractice;
 
 import java.util.*;
 
+// https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
 public class AllStringPermutation {
 
 	public static void main(String[] args) {
@@ -33,6 +35,35 @@ public class AllStringPermutation {
 
 	}
 
+	// Alternate Using Freq
+	public List<String> find_permutation(String S) {
+		// Code here
+		int n = S.length();
+		int[] freq = new int[n];
+		List<String> list = new ArrayList<>();
+		function(S,n,freq,list,"");
+		Collections.sort(list);
+		return list;
+	}
 
+	void function(String str ,int length , int[] freq , List<String> list , String ref)
+	{
+		if(ref.length() == length)
+		{
+			if(! list.contains(ref)) list.add(ref);
+			return;
+		}
+
+		for(int i=0;i<length;i++)
+		{
+			if(freq[i]==0)
+			{
+				char ch = str.charAt(i);
+				freq[i]=1;
+				function(str,length,freq,list,ref+ch);
+				freq[i]=0;
+			}
+		}
+	}
 
 }

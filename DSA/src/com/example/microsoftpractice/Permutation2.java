@@ -2,25 +2,34 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/permutations-ii/
+
 public class Permutation2 {
 	public List<List<Integer>> permuteUnique(int[] nums) {
-		List<List<Integer>> res = new ArrayList<>();
-		backtrack(nums, 0, new LinkedList<>(), res);
-		return res;
+		int n = nums.length;
+		int[] freq = new int[n];
+		List<List<Integer>> list = new ArrayList<>();
+		function(nums , n , freq , list , new ArrayList<>());
+		return list;
 	}
 
-
-	private void backtrack(int[] nums, int start, List<Integer> cur, List<List<Integer>> res) {
-		if (cur.size() == nums.length ) {
-			if(!res.contains(cur)) res.add(new ArrayList<>(cur));
+	void function(int[] nums , int length , int[] freq , List<List<Integer>> result , List<Integer> list)
+	{
+		if(list.size() == length)
+		{
+			if(! result.contains(list)) result.add(new ArrayList<>(list));
 			return;
 		}
-
-		for (int i = 0; i <= cur.size(); i++) {
-			cur.add(i, nums[start]);
-			backtrack(nums, start + 1, cur, res);
-			cur.remove(i);
+		for(int i=0;i<length;i++)
+		{
+			if(freq[i] == 0)
+			{
+				freq[i] = 1;
+				list.add(nums[i]);
+				function(nums , length,freq,result,list);
+				freq[i] = 0;
+				list.remove(list.size()-1);
+			}
 		}
 	}
-
 }

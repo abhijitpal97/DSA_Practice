@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 import java.util.* ;
 import java.io.*; 
 
+// https://www.codingninjas.com/studio/problems/rearrange-the-array_799559?topList=top-microsoft-coding-interview-questions
+
 public class ReArrangeArray {
 
 	public static void main(String[] args)

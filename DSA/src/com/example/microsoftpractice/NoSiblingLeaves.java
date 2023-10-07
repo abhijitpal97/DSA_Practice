@@ -4,6 +4,7 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://practice.geeksforgeeks.org/problems/print-all-nodes-that-dont-have-sibling/1
 
 public class NoSiblingLeaves
 {

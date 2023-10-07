@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
+
 public class RemoveAllOccuranceSubstring {
 	public String removeOccurrences(String s, String part) {
 		String res = "";

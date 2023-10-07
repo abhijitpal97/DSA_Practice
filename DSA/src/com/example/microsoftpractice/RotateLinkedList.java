@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 
+// https://leetcode.com/problems/rotate-list/
+
 public class RotateLinkedList {
 	public LinkedListNode rotateRight(LinkedListNode head, int k) {
 		if(head == null) return head;

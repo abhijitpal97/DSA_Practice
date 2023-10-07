@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/permutation-in-string/
+
 public class PermutationInString {
 	public boolean checkInclusion(String s1, String s2) {
 
