@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/water-bottles/
+
 public class WaterBottles {
 	int count  = 0;
 	public int numWaterBottles(int numBottles, int numExchange) {
@@ -22,5 +24,22 @@ public class WaterBottles {
 		empty -= (exchangePossible*exchange); // 3 2 3
 
 		helper(exchangePossible , empty , exchange);
+	}
+
+
+	// Alternate
+	public int numWaterBottles1(int numBottles, int numExchange) {
+		int count =0;
+		int empty = 0;
+
+		while((numBottles+empty)>=numExchange)
+		{
+			count += numBottles;
+			empty += numBottles;
+			numBottles = empty/numExchange;
+			empty = empty%numExchange;
+		}
+
+		return count+numBottles;
 	}
 }

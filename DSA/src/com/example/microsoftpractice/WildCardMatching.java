@@ -1,5 +1,7 @@
 package com.example.microsoftpractice;
 
+// https://leetcode.com/problems/wildcard-matching/description/
+
 public class WildCardMatching {
 	public boolean isMatch(String s, String p) {
 		Boolean[][] dp = new Boolean[s.length()+1][p.length()+1];

@@ -2,6 +2,8 @@ package com.example.uncategorized;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://www.codingninjas.com/studio/problems/level-leaf_3210614?leftPanelTab=0
+
 public class CheckIfLevelLeafSame{
 
 	public static void main(String[] args)

@@ -2,6 +2,8 @@ package com.example.gspractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/find-pivot-index/
+
 public class FindPivotIndex {
 	public static void main(String[] args)
 	{

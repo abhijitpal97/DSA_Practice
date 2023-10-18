@@ -2,6 +2,8 @@ package com.example.microsoftpractice;
 
 import java.util.*;
 
+// https://leetcode.com/problems/print-words-vertically/
+
 public class StringPrintVertically {
 	public List<String> printVertically(String s) {
 

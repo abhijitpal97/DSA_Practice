@@ -1,6 +1,7 @@
 package com.example.gspractice;
 import java.util.*;
 
+// // https://www.codingninjas.com/studio/problems/moderate_5825054
 
 public class IndexPair {
 

@@ -28,7 +28,6 @@ public class AllPalindromicNumberTillN_Moderate2707 {
 	{
 		int num = n;
 		int rev = 0;
-		int div = 0;
 		while(n != 0)
 		{
 			int rem = n%10;

@@ -2,6 +2,8 @@ package com.example.amazonpractice;
 
 import java.util.*;
 
+// https://www.codingninjas.com/studio/problems/burgers_1461339
+
 public class BurgerWithoutWaste {
 	public List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {
 		List<Integer> list = new ArrayList<>();
