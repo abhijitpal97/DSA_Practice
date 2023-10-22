@@ -1,5 +1,7 @@
 package com.example.gspractice;
 
+// https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/description/
+
 public class MinimumLengthPrefixSuffixDeletion {
 	public static void main(String[] args)
 	{

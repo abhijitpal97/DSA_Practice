@@ -2,6 +2,8 @@ package com.example.gspractice;
 
 import java.util.*;
 
+// https://leetcode.com/discuss/interview-question/699973/
+
 public class Turnsites
 {
 	public static void main(String[] args)

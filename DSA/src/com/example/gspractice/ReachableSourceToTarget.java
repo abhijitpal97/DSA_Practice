@@ -1,5 +1,7 @@
 package com.example.gspractice;
 
+// https://www.codingninjas.com/studio/problems/reaching-points_1214656
+
 public class ReachableSourceToTarget {
 	public static boolean isReachable(int startX, int startY, int endX, int endY) {
 		// Write your code here.

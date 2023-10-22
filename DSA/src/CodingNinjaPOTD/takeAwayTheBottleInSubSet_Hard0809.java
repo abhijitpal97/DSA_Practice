@@ -1,5 +1,7 @@
 package CodingNinjaPOTD;
 
+// https://www.codingninjas.com/studio/problems/take-away-the-bottle_2179745
+
 public class takeAwayTheBottleInSubSet_Hard0809 {
 	public static int takeAwayTheBottle(int[] arr,int n) {
 		// Write your code here.

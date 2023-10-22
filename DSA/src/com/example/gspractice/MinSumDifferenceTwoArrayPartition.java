@@ -1,5 +1,6 @@
 package com.example.gspractice;
 
+// https://practice.geeksforgeeks.org/problems/minimum-sum-partition3317/1
 public class MinSumDifferenceTwoArrayPartition {
 	static int min = Integer.MAX_VALUE;
 	public static int minSubsetSumDifference(int []arr, int n) {

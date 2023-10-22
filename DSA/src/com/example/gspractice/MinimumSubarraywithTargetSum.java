@@ -1,6 +1,8 @@
 package com.example.gspractice;
 import java.util.ArrayList;
 
+// https://www.codingninjas.com/studio/problems/minimum-subarray-with-required-sum_696460
+
 public class MinimumSubarraywithTargetSum 
 {
 	public static ArrayList<Integer> minSubarray(ArrayList<Integer> arr, int n, int x) 

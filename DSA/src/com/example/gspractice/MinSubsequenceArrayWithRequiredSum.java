@@ -1,10 +1,10 @@
 package com.example.gspractice;
 import java.util.ArrayList;
-
+ 
 public class MinSubsequenceArrayWithRequiredSum 
 {
 	static int min = Integer.MAX_VALUE;
-	public static ArrayList<Integer> minSubarray(ArrayList<Integer> arr, int n, int x) 
+	public static ArrayList<Integer> minSubsequence(ArrayList<Integer> arr, int n, int x) 
 	{
 		// Write your code here
 		min = Integer.MAX_VALUE;
