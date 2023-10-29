@@ -2,11 +2,13 @@ package CodingNinjaPOTD;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//https://leetcode.com/problems/russian-doll-envelopes/description/ 
+
 public class RussianDollEnvelops_Hard0208 {
 	static int max = Integer.MIN_VALUE;
 
 	public static void main(String[] args)
-	
+
 	{
 		int res = findMaxEnvelopes(new ArrayList<>(Arrays.asList(10,2,7,3,3,5,6,4)), 
 				new ArrayList<>(Arrays.asList(2,1,1,8,3,8,10,2)), 8);
@@ -49,23 +51,59 @@ public class RussianDollEnvelops_Hard0208 {
 		}
 		helper(envelopes , index+1 , count , n , prev);
 	}
-	
-	// Binary Search
-    public int maxEnvelopes(int[][] envelopes) {
-        
-    Arrays.sort(envelopes, (a, b) -> a[0] == b[0] ? b[1] - a[1] : a[0] - b[0]);
-    int ans = 0;
-    int[] dp = new int[envelopes.length];
-    for (int[] e : envelopes) {
-      int i = Arrays.binarySearch(dp, 0, ans, e[1]);
-      if (i < 0)
-        i = -(i + 1);
-      dp[i] = e[1];
-      if (i == ans)
-        ++ans;
-    }
-    return ans;
 
-    }
+	// Binary Search
+	public int maxEnvelopes(int[][] envelopes) {
+
+		Arrays.sort(envelopes, (a, b) -> a[0] == b[0] ? b[1] - a[1] : a[0] - b[0]);
+		int ans = 0;
+		int[] dp = new int[envelopes.length];
+		for (int[] e : envelopes) {
+			int i = Arrays.binarySearch(dp, 0, ans, e[1]);
+			if (i < 0)
+				i = -(i + 1);
+			dp[i] = e[1];
+			if (i == ans)
+				++ans;
+		}
+		return ans;
+
+	}
+
+	// DP Without Binary Search -> TC -> O(n^2)
+
+	public static int findMaxEnvelopesDP(ArrayList<Integer> height, ArrayList<Integer> width, int n) {
+		// Write your code here.
+		int[][] envelopes = new int[n][2];
+
+		for(int i=0;i<n;i++)
+		{
+			envelopes[i][0]= height.get(i);
+			envelopes[i][1]= width.get(i);
+		}
+
+		Arrays.sort(envelopes, new Comparator<int[]>(){
+			public int compare(int[] v1, int[] v2) {
+				if(v1[0] < v2[0] || (v1[0] == v2[0] && v1[1] > v2[1])) {
+					return -1;
+				}
+				return 1;
+			}
+		});
+
+		int[] maxEnvelopes = new int[n];
+		int result = 0;
+
+		for(int i = 0; i < n; i++) {
+			maxEnvelopes[i] = 1;
+			for(int j = 0; j < i; j++) {
+				if(envelopes[i][1] > envelopes[j][1]) {
+					maxEnvelopes[i] = Math.max(maxEnvelopes[i], maxEnvelopes[j]+1);
+				}
+			}
+			result = Math.max(result, maxEnvelopes[i]);
+		}
+		return result;
+	}
 
 }
