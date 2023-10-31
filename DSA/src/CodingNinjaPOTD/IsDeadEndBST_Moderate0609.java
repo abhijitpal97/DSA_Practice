@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://practice.geeksforgeeks.org/problems/check-whether-bst-contains-dead-end/1
+
 public class IsDeadEndBST_Moderate0609 {
 	public static Boolean isDeadEnd(TreeNode root) {
 		// Write your code here

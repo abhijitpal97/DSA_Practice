@@ -7,7 +7,7 @@ public class DigitProductEqualToNumber_Easy2207 {
 
 	public static void main(String[] args)
 	{
-		int res = digitProduct(7164);
+		int res = digitProduct(36);
 		System.out.println(res);
 	}
 	public static int digitProduct(int n) {
