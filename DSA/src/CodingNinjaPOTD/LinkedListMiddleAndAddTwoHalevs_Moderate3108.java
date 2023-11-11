@@ -5,87 +5,153 @@ import com.example.datastructure.skeleton.LinkedListNode;
 // https://www.codingninjas.com/studio/problems/add-first-and-second-half_759343
 
 public class LinkedListMiddleAndAddTwoHalevs_Moderate3108 {
+	
+	public static void main(String[] args)
+	{
+		LinkedListNode head = new LinkedListNode(9);
+//		head.next = new LinkedListNode(1);
+//		head.next.next = new LinkedListNode(9);
+//		head.next.next.next = new LinkedListNode(9);
+//		head.next.next.next.next = new LinkedListNode(2);
+//		head.next.next.next.next.next = new LinkedListNode(1);
+//		head.next.next.next.next.next.next = new LinkedListNode(9);
+//		head.next.next.next.next.next.next.next = new LinkedListNode(9);
+		
+		LinkedListNode res =  addFirstAndSecondHalf(head);
+		StringBuilder sb = new StringBuilder();
+		while(res != null)
+		{
+			sb.append(res.val);
+			res = res.next;
+		}
+		System.out.println(sb);
+	}
+	
+	
 	public static LinkedListNode addFirstAndSecondHalf(LinkedListNode head) {
-		// Write your code here.
-		if(head == null) return null;
-		if(head.next == null) return head;
-		LinkedListNode slow = head;
-		LinkedListNode fast = head;
-		LinkedListNode prev = null;
-		int count = 0;
-		while(fast != null && fast.next != null)
-		{
-			prev = slow;
-			slow = slow.next;
-			fast = fast.next.next;
-			count++;
-		}
-		if(count%2 == 0)
-		{
-			fast = prev.next;
-			prev.next = null;
-		}
-		else
-		{
-			fast = slow.next;
-			slow.next = null;
-		}
+        if(head == null) {
+            return null;
+        }
 
-		head = reverse(head);
-		fast = reverse(fast);
+        LinkedListNode temp = head;
 
-		head = sum(head , fast);
+        // Variable to hold the size of the linked list.
+        int len = 0;
 
-		return reverse(head);
-	}
+        while(temp != null) {
+            len++;
+            temp = temp.next;
+        }
 
-	static LinkedListNode reverse(LinkedListNode LinkedListNode)
-	{
-		LinkedListNode curr = LinkedListNode;
-		LinkedListNode temp = null;
-		LinkedListNode prev = null;
-		while(curr!= null)
-		{
-			temp = curr.next;
-			curr.next = prev;
-			prev = curr;
-			curr = temp;
-		}
-		return prev;
-	}
+        LinkedListNode head1 = null, head2 = null, cur = null;
+        int count = 0;
 
-	static LinkedListNode sum(LinkedListNode LinkedListNode1, LinkedListNode LinkedListNode2)
-	{
-		int rem = 0;
-		int div = 0;
-		LinkedListNode res = new LinkedListNode(-1);
-		LinkedListNode temp = res;
-		while(LinkedListNode1 != null && LinkedListNode2 != null)
-		{
-			int sum = div+LinkedListNode1.val+LinkedListNode2.val;
-			rem = sum%10;
-			div = sum/10;
-			temp.next = new LinkedListNode(rem);
-			temp = temp.next;
-		}
-		while(LinkedListNode1 != null)
-		{
-			int sum = div+LinkedListNode1.val;
-			rem = sum%10;
-			div = sum/10;
-			temp.next = new LinkedListNode(rem);
-			temp = temp.next;
-		}
-		while(LinkedListNode2 != null)
-		{
-			int sum = div+LinkedListNode2.val;
-			rem = sum%10;
-			div = sum/10;
-			temp.next = new LinkedListNode(rem);
-			temp = temp.next;
-		}
-		if(rem != 0) temp.next = new LinkedListNode(rem);
+        temp = head;
 
-		return res.next;
-	}
+        // Extract 1st half of the linked list.
+        while(count < (len + 1) / 2) {
+
+            if(head1 == null) {
+                head1 = new LinkedListNode(temp.val);
+                cur = head1;
+            }
+            else {
+                cur.next = new LinkedListNode(temp.val);
+                cur = cur.next;
+            }
+
+            temp = temp.next;
+            count++;
+        }
+
+        cur = null;
+
+        // Extract the 2nd half of the linked list.
+        while(temp != null) {
+            if(head2 == null) {
+                head2 = new LinkedListNode(temp.val);
+                cur = head2;
+            }
+            else {
+                cur.next = new LinkedListNode(temp.val);
+                cur = cur.next;
+            }
+
+            temp = temp.next;
+        }
+
+        head1 = reverseList(head1);
+        head2 = reverseList(head2);
+
+        LinkedListNode sumHead = addTwoLinkedList(head1, head2);
+
+        while(sumHead != null && sumHead.val == 0) {
+            sumHead = sumHead.next;
+        }
+
+        // If all the digits in the sum string are zero, return only "0".
+        if(sumHead == null) {
+            return new LinkedListNode(0);
+        }
+
+        return sumHead;
+    }
+
+    // Function used to add two linked lists.
+    private static LinkedListNode addTwoLinkedList(LinkedListNode head1, LinkedListNode head2) {
+        LinkedListNode head = null, cur = null;
+        int carry = 0;
+
+        while(head1 != null || head2 != null) {
+            int sum = carry + head1.val;
+            if(head2 != null) {
+                sum += head2.val;
+            }
+
+            if(sum > 9) {
+                sum -= 10;
+                carry = 1;
+            }
+            else {
+                carry = 0;
+            }
+
+            if(head == null) {
+                head = new LinkedListNode(sum);
+                cur = head;
+            }
+            else {
+                cur.next = new LinkedListNode(sum);
+                cur = cur.next;
+            }
+
+            head1 = head1.next;
+            if(head2 != null) {
+                head2 = head2.next;
+            }
+        }
+
+        if(carry == 1) {
+            cur.next = new LinkedListNode(1);
+            cur = cur.next;
+        }
+
+        LinkedListNode reverseListHead = reverseList(head);
+
+        return reverseListHead;
+    }
+
+    // Function used to reverse the linked list.
+    private static LinkedListNode reverseList(LinkedListNode head) {
+        LinkedListNode prev = null;
+
+        while(head != null) {
+            LinkedListNode temp = head.next;
+            head.next = prev;
+            prev = head;
+            head = temp;
+        }
+
+        return prev;
+    }
 }
