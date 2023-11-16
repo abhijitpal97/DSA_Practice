@@ -1,4 +1,4 @@
-package CodingNinjaPOTD;
+package com.example.uncategorized;
 
 import com.example.datastructure.skeleton.LinkedListNode;
 // https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1

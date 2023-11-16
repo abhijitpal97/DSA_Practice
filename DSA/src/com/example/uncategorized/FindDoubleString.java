@@ -1,4 +1,4 @@
-package CodingNinjaPOTD;
+package com.example.uncategorized;
 import java.util.* ;
 import java.io.*; 
 
