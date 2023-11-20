@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 // https://leetcode.com/problems/frequency-of-the-most-frequent-element
 
-public class Solution {
+public class FrequencyOfMostFrequentElement_1118 {
 	public int maxFrequency(int[] nums, int k) {
 		Arrays.sort(nums);
 		int i=0;
