@@ -22,6 +22,8 @@ public class MinSwap
 	public int minSwaps(int nums[])
 	{
 		// Code here
+		// 2 8 5 4
+		//2,0 | 4,3 | 5,2 | 8,1
 		List<SwapPair> list = new ArrayList<>();
 		for(int i=0;i<nums.length;i++) list.add(new SwapPair(nums[i] , i ));
 
@@ -30,10 +32,10 @@ public class MinSwap
 		int count=0;
 		for(int i = 0 ; i<nums.length;i++)
 		{
-			SwapPair p1 = list.get(i);
+			SwapPair p1 = list.get(i); // 4,3
 			if(p1.pos == i) continue;
-			count++;
-			list.set(i , list.get(p1.pos));
+			count++; // 1
+			list.set(i , list.get(p1.pos)); 
 			list.set(p1.pos , p1);
 			i--;
 		}
