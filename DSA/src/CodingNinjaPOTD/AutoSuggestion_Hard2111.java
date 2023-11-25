@@ -6,6 +6,7 @@ import com.example.datastructure.skeleton.TrieNode;
 import java.io.*; 
 
 // https://www.codingninjas.com/studio/problems/auto-suggestion_3155171
+// https://leetcode.com/problems/search-suggestions-system/ -> Oracle
 
 public class AutoSuggestion_Hard2111 {
 	static TrieNode root;
