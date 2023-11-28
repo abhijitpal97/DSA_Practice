@@ -14,7 +14,7 @@ public class PalindromePartitioning2_Hard1609 {
 	public static int palindromePartitioning(String str) {
 		// Write your code here
 		min = Integer.MAX_VALUE;
-		palindrome(str , 0);
+		palindrome(str , -1);
 		return min == Integer.MAX_VALUE?-1:min-1;
 	}
 

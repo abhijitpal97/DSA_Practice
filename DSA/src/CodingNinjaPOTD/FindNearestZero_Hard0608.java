@@ -3,6 +3,8 @@ import java.util.* ;
 import java.io.*; 
 import java.util.ArrayList;
 
+// https://www.codingninjas.com/studio/problems/distance-of-nearest-cell-having-1-in-a-binary-matrix_1169913
+
 public class FindNearestZero_Hard0608 {
 	public static int[][] findNearestZero(ArrayList<ArrayList<Integer>> mat) {
 		// Write Your Code here
