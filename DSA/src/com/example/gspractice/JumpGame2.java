@@ -5,7 +5,12 @@ import java.util.Arrays;
 // https://leetcode.com/problems/jump-game-ii/
 
 public class JumpGame2 {
-	public int jump(int[] nums) {
+	public static void main(String[] args)
+	{
+		int res = jump(new int[] {4,0,1,1});
+		System.out.println(res);
+	}
+	public static int jump(int[] nums) {
 		int n = nums.length;
 		int[] dp = new int[n];
 		Arrays.fill(dp , Integer.MAX_VALUE);
