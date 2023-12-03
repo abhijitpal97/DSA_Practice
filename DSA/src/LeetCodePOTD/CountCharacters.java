@@ -9,7 +9,7 @@ public class CountCharacters {
 		System.out.println(res);
 
 	}
-	public int countCharacters(String[] words, String chars) {
+	public static int countCharacters(String[] words, String chars) {
 		int count = 0;
 		char[] allChars = new char[26];
 		for(char ch : chars.toCharArray()) allChars[ch-'a']++;
@@ -22,7 +22,7 @@ public class CountCharacters {
 		return count;
 	}
 
-	boolean canForm(String str , char[] chars)
+	static boolean canForm(String str , char[] chars)
 	{
 		char[] curr = chars.clone();
 
