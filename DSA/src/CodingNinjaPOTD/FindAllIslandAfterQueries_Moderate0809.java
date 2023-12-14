@@ -1,5 +1,7 @@
 package CodingNinjaPOTD;
 
+// https://www.codingninjas.com/studio/problems/number-of-islands-ii_1266048
+
 public class FindAllIslandAfterQueries_Moderate0809 {
 	public static int[] numberOfIslandII(int n, int m, int [][]queries, int q) {
 		// Write your code here.
