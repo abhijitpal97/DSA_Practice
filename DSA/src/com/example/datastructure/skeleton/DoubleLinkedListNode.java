@@ -3,6 +3,7 @@ package com.example.datastructure.skeleton;
 public class DoubleLinkedListNode
 {
 	public int data;
+	public long value;
 	public DoubleLinkedListNode next;
 	public DoubleLinkedListNode prev;
 	public int key;
@@ -15,6 +16,10 @@ public class DoubleLinkedListNode
 	public DoubleLinkedListNode(int data)
 	{
 		this.data = data;
+	}
+	public DoubleLinkedListNode(long value)
+	{
+		this.value = value;
 	}
 
 	public DoubleLinkedListNode(String val)

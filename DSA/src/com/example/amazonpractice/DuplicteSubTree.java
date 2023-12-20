@@ -25,7 +25,7 @@ public class DuplicteSubTree{
 		String left = calculateDups(root.left , ans , list);
 		String right = calculateDups(root.right , ans , list);
 
-		String s = left+String.valueOf(root.val)+right;
+		String s = root.val+"_"+left+"_"+right;
 		ans.put(s,ans.getOrDefault(s , 0)+1);
 		if(ans.get(s) == 2)
 		{
