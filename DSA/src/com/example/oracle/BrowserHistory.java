@@ -4,7 +4,7 @@ import com.example.datastructure.skeleton.DoubleLinkedListNode;
 
 // https://leetcode.com/problems/design-browser-history/
 
-class BrowserHistory {
+public class BrowserHistory {
 	DoubleLinkedListNode head;
 
 	public BrowserHistory(String homepage) {
