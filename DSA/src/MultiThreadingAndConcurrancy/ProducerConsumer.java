@@ -19,7 +19,7 @@ class Producer implements Runnable
 			{
 				System.out.println("Produced - "+i);
 				bQ.offer(i);
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -61,7 +61,7 @@ public class ProducerConsumer
 {
 	public static void main(String[] args)
 	{
-		BlockingQueue<Integer> bQ = new LinkedBlockingQueue<>(15);
+		BlockingQueue<Integer> bQ = new LinkedBlockingQueue<>(4);
 		Producer prod = new Producer(bQ);
 		Consumer cons = new Consumer(bQ);
 
