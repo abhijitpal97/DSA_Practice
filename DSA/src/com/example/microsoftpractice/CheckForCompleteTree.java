@@ -4,6 +4,8 @@ import java.util.*;
 
 import com.example.datastructure.skeleton.TreeNode;
 
+// https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
+
 public class CheckForCompleteTree {
 	public boolean isCompleteTree(TreeNode root) {
 		Queue<TreeNode> queue = new LinkedList<>();

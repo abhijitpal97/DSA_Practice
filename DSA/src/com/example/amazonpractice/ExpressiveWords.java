@@ -3,7 +3,12 @@ package com.example.amazonpractice;
 // https://leetcode.com/problems/expressive-words/
 
 public class ExpressiveWords {
-	public int expressiveWords(String s, String[] words) {
+	public static void main(String[] args)
+	{
+		int res = expressiveWords("heeellooo", new String[] {"hello", "hi", "helo"});
+		System.out.println(res);
+	}
+	public static int expressiveWords(String s, String[] words) {
 		int count = 0;
 
 		for(String str : words)
@@ -14,7 +19,7 @@ public class ExpressiveWords {
 		return count;
 	}
 
-	boolean checkIfExpressive(String str , String word)
+	static boolean checkIfExpressive(String str , String word)
 	{
 		int sLen = str.length();
 		int sStart = 0;
