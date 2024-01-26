@@ -31,7 +31,7 @@ public class TaskScheduler {
 		while(! processQ.isEmpty() || ! waitingQ.isEmpty())
 		{
 			while(! waitingQ.isEmpty())
-			{
+			{	
 				if(waitingQ.peek().time == time) processQ.offer(waitingQ.poll().task);
 				else break;
 			}
