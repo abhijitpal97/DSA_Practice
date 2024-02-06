@@ -56,9 +56,11 @@ public class FileSystemCompositeMethod
 		Directory learnDir = new Directory("Learn");
 
 		FileSystem movie = new File("Hulchal");
+		FileSystem movie1 = new File("Mother India");
 		FileSystem learn = new File("Spark");
 
 		movieDir.add(movie);
+		movieDir.add(movie1);
 		learnDir.add(learn);
 
 		movieDir.ls();
