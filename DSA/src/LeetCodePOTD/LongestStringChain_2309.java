@@ -3,6 +3,7 @@ package LeetCodePOTD;
 import java.util.*;
 
 // https://leetcode.com/problems/longest-string-chain/description/
+//Google
 
 public class LongestStringChain_2309 {
 	public static void main(String[] args) {
