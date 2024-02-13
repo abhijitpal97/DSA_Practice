@@ -1,5 +1,7 @@
 package com.example.uncategorized;
 
+import java.util.*;
+
 import com.example.datastructure.skeleton.TreeNode;
 
 // https://www.codingninjas.com/studio/problems/level-leaf_3210614?leftPanelTab=0
@@ -37,5 +39,30 @@ public class CheckIfLevelLeafSame{
 		int r = height(root.right);
 
 		return Math.max(l , r) +1;
+	}
+
+	// Alternate
+	static Set<Integer> set;
+	public static int levelLeaf(TreeNode root) {
+		// Write your code here.
+		set = new HashSet<>();
+		function(root , 0);
+		//System.out.println(set);
+		return set.size()==1?1:0;
+
+	}
+
+	static void function(TreeNode node , int level)
+	{
+		if(node == null) return;
+		if(isLeaf(node)) set.add(level);
+
+		function(node.left , level+1);
+		function(node.right , level+1);
+	}
+
+	static boolean isLeaf(TreeNode node)
+	{
+		return node.left==null && node.right==null;
 	}
 }
