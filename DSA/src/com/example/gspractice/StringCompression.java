@@ -1,6 +1,7 @@
 package com.example.gspractice;
 
 // https://leetcode.com/problems/string-compression/description/
+// leetCode75
 
 public class StringCompression {
 	public int compress(char[] chars) {
